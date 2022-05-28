@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9d0136b17b.js" crossorigin="anonymous"></script>
+    <title>Netflix Landing Page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My list</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="banner - anime.jpg" class='bg' alt="Banner anime">
+        <div class="content">
+            <img src="nome - anime.png" class="animeTitle">
+            <h4>
+                <span>2017</span>
+                <span><i>16+</i></span>
+                <span>12Ep</span>
+                <span>Light Novel</span>
+            </h4>
+            <p>Classroom of the Elite é uma série de light novel japonesa escrita por Shōgo Kinugasa e ilustrada por Shunsaku Tomose. Uma adaptação para mangá ilustrada por Yuyu Ichino se iniciou na Monthly Comic Alive do Media Factory em 27 de janeiro de 2016.</p>
+            <div class="buttons">
+                <a href="#"><i class="fa-solid fa-play"></i> </i>Play</a>
+                <a href="#"><i class="fa-solid fa-plus"></i> </i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png" alt="play">Assistir Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="trailer.mp4" controls="true"></video>
+        <img src="close.png" alt="close" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+</body>
+</html>
